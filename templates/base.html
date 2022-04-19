@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}<link rel="icon" type="image/>x-icon" href="{% static "about/images/4 copy.png" %}" />
+    {% load static %}<link rel="stylesheet" href="{% static "about/styles.css" %}" />
+    <meta charset="UTF-8">
+    <title>Volt CRM</title>
+</head>
+<header>
+    {% load static %} <img class="logo" src="{%static "about/images/4 copy.png"%}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li> <a href="{% url 'home' %}">Dashboard</a> </li>
+                <li> <a href="{% url 'about' %}">Profile</a> </li>
+                <li> <a href="{% url 'leads_view' %}">Leads</a> </li>
+                <li> <a href="">Reports</a> </li>
+            </ul>
+        </nav>
+        <a class="button_class" href="{% url 'add_leads_view' %}"><button>Create New Lead</button></a>
+</header>
+<body>
+
+        {%  block content  %}
+
+        {% endblock %}
+
+</body>
+</html>

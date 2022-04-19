@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} <link rel="stylesheet" href="{% static "about/fonts.css" %}" />
+    <h1>{{ my_text }}</h1>
+    <h3>{{ my_number }}</h3>
+    <ul>
+        {% for item in my_list %}
+            {% if item != "Joe" %}
+                <li> {{ forloop.counter }} - {{ item }}</li>
+            {% else %}
+                <li> {{ forloop.counter }} - {{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}

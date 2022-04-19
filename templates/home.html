@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %} <link rel="stylesheet" href="{% static "about/styles.css" %}" />
+{% block content %}
+    <body>
+        <h1>Dashboard</h1>
+        <p>Date: {{ today }}</p>
+        <h3>Total Active Leads: {{ number_of_leads }}</h3>
+    </body>
+{% endblock %}

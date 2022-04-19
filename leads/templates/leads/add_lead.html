@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}<link rel="stylesheet" href="{% static "about/styles.css" %}" />
+<h2>New Guest Card</h2>
+    {% if email_found %}
+    <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Duplicate Guest Card, please try again!
+    </div>
+    {% endif %}
+    {% if post_success %}
+    <div class="alert_successful">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Submission Successful!
+    </div>
+    {% endif %}
+    <form class="lead_info" action='.' method="POST"> {% csrf_token %}
+        <li><input type="text" name="first_name" placeholder="First Name"/></li>
+        <li><input type="text" name="last_name" placeholder="Last Name"/></li>
+        <li><input type="text" name="phone_num" placeholder="Phone"/></li>
+        <li><input type="text" name="email" placeholder="Email"/></li>
+        <li><input type="date" name="birthday" placeholder="Birthday"/></li>
+        <li><input type="Submit" value="Submit"/></li>
+    </form>
+
+{%  endblock %}

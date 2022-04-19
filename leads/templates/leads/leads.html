@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}<link rel="stylesheet" href="{% static "about/styles.css" %}" />
+<h2>Lead Overview</h2>
+{##}
+{#    <form class="lead_info" action='.' method="POST"> {% csrf_token %}#}
+{#        <li><input type="text" name="first_name" placeholder="First Name"/></li>#}
+{#        <li><input type="text" name="last_name" placeholder="Last Name"/></li>#}
+{#        <li><input type="text" name="phone_num" placeholder="Phone"/></li>#}
+{#        <li><input type="text" name="email" placeholder="Email"/></li>#}
+{#        <li><input type="date" name="birthday" placeholder="Birthday"/></li>#}
+{#        <li><input type="Submit" value="Submit"/></li>#}
+{#    </form>#}
+{##}
+    <table class="leads_table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Created On</th>
+            <th></th>
+        </tr>
+        {% if leads_ref %}
+            {% for item in leads_ref reversed %}
+                <tr>
+                    <td> {{ item.firstname }}</td>
+                    <td> {{ item.lastname }}</td>
+                    <td> {{ item.phone_num }}</td>
+                    <td> {{ item.email }}</td>
+                    <td> {{ item.birthday }}</td>
+                     <form method="POST"> {% csrf_token %}
+                            <input type="hidden" value="{{item.id}}" name="delete-id">
+                            <td><input type="submit" name="DeleteLead" value="Delete" /></td>
+                    </form>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+{%  endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}<link rel="stylesheet" href="{% static "about/fonts.css" %}" />
+<form action='.' method="POST"> {% csrf_token %}
+    <li><input type="text" name="user_name" placeholder="Name"/></li>
+    <li><input type="text" name="email" placeholder="Email"/></li>
+    <input type="Submit" value="Search"/>
+</form>
+
+    <p>Lead Name: {{ name }}</p>
+
+{%  endblock %}

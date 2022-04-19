@@ -1,0 +1,170 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10%;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(255, 255, 255);
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    color: #000000;
+    /*padding: 1px 5px;*/
+}
+
+.nav__links li a:hover {
+    color: rgba(159, 220, 252, 0.76);
+}
+
+.logo {
+    cursor: pointer;
+    height: 150px;
+    width: auto;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+tr:hover {
+     background: rgb(197, 197, 197);
+	}
+
+
+
+button:hover {
+    background-color: rgba(244, 66, 66, 0.72);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p, h1, h2, h3 {
+    padding: 0px 30px;
+}
+
+.leads_table th {
+    text-align: left;
+    padding: 10px 20px;
+    border: 1px solid;
+}
+.leads_table {
+    border-collapse: collapse; /* Collapse borders */
+    width: 95%; /* Full-width */
+    border: 1px solid #ddd;
+    padding: 10px 40px;
+    margin-left: 30px;
+    margin-right: auto;
+}
+.leads_table td {
+    padding: 10px 25px;
+
+}
+.leads_table input[type="submit"] {
+    color: #000000;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    border:1px solid black;
+    width: 100%;
+    height: 30px;
+}
+
+.lead_info input[type="Submit"] {
+    padding: 10px 25px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.leads_table input[type="submit"]:hover {
+    color: #500000;
+    background-color: #fed6d6;
+    border:1px solid red;
+}
+
+
+.leads_table td a {
+    color: rgba(207, 1, 1, 0.7);
+
+}
+
+/*.leads_table tr:nth-child(even) {*/
+/*    background-color: rgba(94, 94, 94, 0.10);*/
+/*}*/
+
+.header {
+    width: 20%;
+    height: auto;
+    padding: 0 20px;
+}
+
+.lead_info li {
+    display: block;
+    padding: 5px 0;
+}
+.lead_info input{
+    padding: 5px 30px;
+}
+
+.lead_info {
+    padding: 15px 30px;
+}
+
+body {
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+/* The alert message box */
+.alert_successful {
+  padding: 20px;
+  background-color: #1dc000; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+
+
